@@ -6,5 +6,14 @@ public class MiniDuckSimulator {
         mallardDuck.performQuack();
         mallardDuck.performFly();
         mallardDuck.display();
+
+        System.out.println("------------------------");
+        
+        Duck modelDuck = new ModelDuck();
+        modelDuck.setFlyBehaviour(new FlyNoWay());
+        modelDuck.setQuackBehaviour(new MuteQuack());
+        modelDuck.performFly();
+        modelDuck.performQuack();
+        modelDuck.display();
     }
 }
